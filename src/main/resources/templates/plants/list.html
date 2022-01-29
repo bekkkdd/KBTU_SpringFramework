@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>
+    <ul>
+        <a href="/plants">List Plants</a>
+        <a href="/plants/form">Create Plant</a>
+    </ul>
+</div>
+<div>
+    <ul>
+        <th:block th:each="plant : ${plants}">
+            <p>Name: <li th:utext="${plant.id}"></li> </p>
+            <p>Name: <li th:utext="${plant.name}"></li> </p>
+            <p>Description: <li th:utext="${plant.description}"></li> </p>
+            <p>Price: <li th:utext="${plant.price}"></li> </p>
+        </th:block>
+    </ul>
+</div>
+</body>
+</html>
